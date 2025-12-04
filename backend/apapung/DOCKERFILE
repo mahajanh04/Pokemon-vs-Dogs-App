@@ -1,0 +1,31 @@
+FROM maven:3.9.4-eclipse-temurin-21 as build
+
+#working directory  
+WORKDIR /backend
+
+## Copy necessary files
+# dependencies
+COPY pom.xml .
+# env vars
+COPY .env .
+# project
+COPY src ./src
+
+# Build backend, there is no need to run tests at this stage
+RUN mvn clean package -DskipTests
+
+# Use JDK for running the application
+FROM eclipse-temurin:21-jre
+
+WORKDIR /backend
+
+COPY .env .
+
+# Copy the built JAR from the previous stage
+COPY --from=build /backend/target/apapung-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose the backend port
+EXPOSE 8080
+
+# Command to run the backend
+ENTRYPOINT ["java", "-jar", "app.jar"]

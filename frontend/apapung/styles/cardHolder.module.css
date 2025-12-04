@@ -1,0 +1,116 @@
+/* Modal overlay for the TextInput */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensure it’s in the foreground */
+}
+
+/* Modal content box styling */
+.modalContent {
+  background-color: #fff;
+  padding: 24px 20px; /* Adds padding for a balanced look */
+  border-radius: 10px; /* Smooth corner radius */
+  width: 320px; /* Slightly larger width for comfort */
+  max-width: 90vw; /* Responsiveness on smaller screens */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 11;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centers content inside modal */
+}
+
+/* TextInput styling within modal */
+.modalTextInput {
+  flex: 1; /* Takes up remaining space */
+  padding: 10px; /* Inner padding */
+  font-size: 16px; /* Readable font size */
+  border: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* Red shadow instead of blue */
+  border-radius: 6px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.modalTextInput:focus {
+  border-color: #ff0000; /* Red border color on focus */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Red focus glow */
+}
+
+/* Dice Icon styling */
+.diceIcon {
+  font-size: 50px; /* Adjust size of dice icon */
+  color: #ff6347; /* Apply red-orange color to dice icon */
+  cursor: pointer;
+  transition: transform 0.4s ease; /* Smooth transform effect */
+}
+
+.diceIcon:hover {
+  transform: scale(1.2);
+  animation: rollDice 2s ease-in-out;
+}
+
+/* Keyframes for the spinning effect */
+@keyframes rollDice {
+  0% {
+    transform: rotate(0deg) scale(1); /* Start at 0 degrees */
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2); /* Rotate 1800 degrees (5 full rotations) */
+  }
+  100% {
+    transform: rotate(90deg) scale (1); /* End at 3600 degrees (10 full rotations) */
+  }
+}
+/* Close button styling (pixelated style) */
+.modalCloseButton {
+  font-size: 16px;
+  padding: 10px 15px; /* Padding for size consistency */
+  background-color: #ff0000; /* Red button background */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.modalCloseButton:hover {
+  background-color: #cc0000; /* Darker red when hovered */
+}
+
+/* Start Button with Pixel Style */
+.startButton {
+  font-family: "Press Start 2P", sans-serif; /* Pixel font for button */
+  font-size: 20px;
+  padding: 20px;
+  background-color: #ff6347; /* Tomato red color */
+  border: 6px solid #333; /* Matching pixelated border */
+  color: #fff;
+  width: 28vh;
+  text-align: left;
+  border-radius: 12px; /* Rounded corners for the start button */
+  cursor: pointer;
+  box-shadow: 8px 8px 0px #333; /* Deep shadow for a 3D effect */
+  transition: all 0.2s ease-in-out;
+}
+
+.startButton:hover {
+  background-color: #ff4500; /* Darker red when hovered */
+  box-shadow: 6px 6px 0px #333;
+}
+
+.startButton:active {
+  transform: translate(2px, 2px); /* Makes it appear pressed */
+  box-shadow: 4px 4px 0px #333;
+}

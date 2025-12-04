@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend/apapung
+      dockerfile: DOCKERFILE
+    ports:
+      - "8080:8080"
+    networks:
+      - csu33012-2425-project05_default
+
+  frontend:
+    build:
+      context: ./frontend/apapung
+      dockerfile: DOCKERFILE
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_URL=http://backend:8080
+    networks:
+      - csu33012-2425-project05_default
+
+networks:
+  csu33012-2425-project05_default:

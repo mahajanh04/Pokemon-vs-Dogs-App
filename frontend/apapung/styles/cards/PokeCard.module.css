@@ -1,0 +1,98 @@
+/* Card container */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 30vh;
+    width: auto;     
+    min-width: 450px;
+    border-radius: 0px;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Hover effect to slightly enlarge the card */
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image styling */
+  .cardImage {
+    background-image: url('/cardFrame.png');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 35%;
+    height: auto;
+    object-fit: fill;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  /* Info container styling */
+  .infoContainer {
+    background-color: rgb(126, 123, 123);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+  
+  /* Card name styling */
+  .cardName {
+    font-size: 1.1em;
+    overflow: visible;
+    font-family: 'Press Start 2P', bold;
+    color: #fff;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  
+  /* Parameter container styling */
+  .parameterContainer {
+    word-wrap: normal;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+  }
+
+  /* Individual parameter styling */
+  .cardParameter {
+    font-size: 1.1rem;
+    font-family: 'Press Start 2P', light;
+    color: #fff;
+    margin: 0;
+    padding: 4px 0;
+  }
+
+  .types {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .typeImage {
+    width: 105px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .parameterKey {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .parameterValue {
+    font-weight: normal;
+    color: #f0f0f0;
+  }

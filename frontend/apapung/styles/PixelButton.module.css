@@ -1,0 +1,28 @@
+/* Pixel Button with Retro Style */
+.pixel-button {
+    font-family: 'Press Start 2P', sans-serif; /* Pixel-style font */
+    color: #ffffff;
+    padding: 2.5vh 6vw;        /* Larger padding for a bold look */
+    font-size: 4vw;            /* Bigger font size for visibility */
+    background-color: var(--bg-color, #ff0000);
+    border: 6px solid var(--border-color, #333);
+    border-radius: 0;          /* No rounded corners for a pixelated look */
+    text-transform: uppercase;
+    box-shadow: 8px 8px 0px #333; /* Deep shadow for a 3D effect */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    text-align: center;
+}
+
+/* Hover effect */
+.pixel-button:hover {
+    background-color: var(--hover-color, #cc0000);
+    box-shadow: 6px 6px 0px #333;
+}
+
+/* Active (pressed) state */
+.pixel-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px #333;
+}

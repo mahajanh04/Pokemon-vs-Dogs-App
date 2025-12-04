@@ -1,0 +1,88 @@
+/* Full-screen container for the background image */
+.backgroundContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/homePageBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Main content overlay */
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+/* Pikachu GIF positioned in the lower left corner */
+.lowerLeftImage {
+    position: absolute;
+    bottom: 17vh; /* Distance from the bottom */
+    left: 5vw;   /* Distance from the left */
+    width: 50vw;  /* Responsive width based on viewport width */
+    height: auto;
+}
+
+/* Start Button with responsive size and retro style */
+.startButton {
+    position: absolute;
+    bottom: 22vh;             
+    left: 50%;               
+    transform: translateX(-50%);
+    padding: 2vh 4vw;        /* Responsive padding: 2% of viewport height, 4% of viewport width */
+    font-size: 3vw;          /* Responsive font size based on viewport width */
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    background-color: #ff0000;
+    border: 4px solid #333;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 0px #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for the Start Button */
+.startButton:hover {
+    background-color: #cc0000;
+    box-shadow: 4px 4px 0px #333;
+}
+
+/* Active (pressed) state for the Start Button */
+.startButton:active {
+    transform: translate(-50%, -2px);
+    box-shadow: 2px 2px 0px #333;
+}
+
+
+.introText {
+    position: absolute;
+    bottom: 4vh;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 2vh 2vw;
+    font-size: 1.8vw;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(255, 102, 0, 0.8); 
+    border-radius: 10px;
+    border: 2px solid #333;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 0px #333;
+}
+
+
+
+
+
+

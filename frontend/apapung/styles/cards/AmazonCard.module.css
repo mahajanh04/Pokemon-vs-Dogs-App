@@ -1,0 +1,76 @@
+  /* Product Card */
+  .productCard {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Image Container */
+  .imageContainer {
+    width: 50%; /* Take 50% width */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
+  
+  .productImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Text Container */
+  .textContainer {
+    width: 50%; /* Take 50% width */
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Product Title */
+  .productTitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Product Price */
+  .productPrice {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Parameters */
+  .parameters {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Product Link */
+  .productLink {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2rem;
+    color: #130d01e3;
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgba(255, 68, 0, 0.639);
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
